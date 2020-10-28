@@ -1,0 +1,99 @@
+@import "import.css";
+body {
+	margin: 75;
+	font-family: Arial, Helvetica, sans-serif;
+	color: 	#CCFFFF;
+	padding: 16px 10px;
+}
+
+ul {
+	margin: 0;
+	font-family: Georgia, serif;
+	padding: 30px;
+}
+
+.top-container {
+	background-color: #336600;
+	padding: 30px;
+	text-align: center;
+}
+
+.div-header {
+	padding: 10px 16px;
+	background: #555;
+	color: #336600;
+	top: 0;
+}
+
+.body {
+	padding: 10px 16px;
+	background-color: #663333;
+	color: 	#CCFFFF;
+}
+
+.content {
+	padding: 15px 5px;
+}
+
+.sticky {
+	position:fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky + .content {
+	padding-top: 102px;
+}
+
+.cur-default {
+	cursor: default;
+}
+
+.cur-pointer {
+	cursor: pointer;
+}
+
+#navbar {
+	overflow: hidden;
+	background-color: #333;
+	font-size: 17px;
+	top: 2rem;
+}
+
+#navbar a {
+	float: left;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+}
+
+#navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+#navbar a:active {
+	background-color: #663333;
+	color: red;
+}
+
+textarea {
+	width: 6rem;
+	height: 8rem;
+	font-size: 3rem;
+	border: 1px solid #888;
+}
+
+h1 { color : black }
+h2 { color : blue }
+p { color : red }
+
+a[href] { color : #009999 }
+
+a[href="#top"] { border: 0.3em solid blue }
+
+#feedback { font-size: 1.4em; }
+#selectable .ui-selecting { background: #FECA40; }
+#selectable .ui-selected { background: #F39814; color: white; }
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 20px; color: black; }

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<title>Basic JQuery/Javascript Page</title>
+	<link rel = "stylesheet"
+	type = "text/css"
+	href = "demofile.css">
+	<script src="headscript.js"></script>
+	<div id="div_header" class="header">
+	  <h2>Seasonal Autumn bulbs </h2>
+	</div>
+	<div id="top-container">
+	  <h1>Example Scripting and Design page</h1>
+	</div>
+	<div id="navbar">
+	  <a class="active" href="javascript:void(0)">Home</a>
+	  <a href="javascript:void(0)">Information</a>
+	  <a href="javascript:void(0)">Contact</a>
+	</div>
+</head>
+<body>
+	<a href="http://jquery.com/">Jquery</a>
+	<script src="jquery-1.6.2.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-3.3.1.js"></script>
+	<script type= "text/javascript">
+	function switch_format()
+	{
+		var symb = "plus";
+		$('#show_text').html(symb);
+		$('#show_equals').html("equals");	
+	}
+
+	function disappear_it()
+	{
+		$("#p1").hide();	
+	}
+	
+	function change_colour()
+	{
+		$('#p1').css("color", "red");
+		$("#p1").show();	
+	}
+	
+	function temp_change()
+	{
+		$('#answer').css("color", "white");
+		$('#answer').css("background-color", "green");
+	}
+	
+	/*$ ( function()
+	{
+		('#selectable').selectable();
+	} ); */
+	
+	function change_colour()
+	{
+		$('#answer').css("color", "white");
+		$('#answer').css("font-size", "2em");
+		$('#answer').css("background-color", "blue");
+	}
+	
+	$.fn.resize=function(a) {
+		var d=Math.ceil;
+		if(a==null)
+			a=200;
+		var e=a,f=a;
+		
+		$(this).each(function(){
+		var b=$(this).height(),
+		c=$(this).width();
+		if(b>c)
+			f=d(c/b*a);
+		else
+			e=d(b/c*a);
+	$(this).css({height:e,width:f})})};
+	//function to change size of input field.
+	//The colour of the input field will also change when the size function is triggered.
+	
+	$("document").ready(function()
+	{
+			$("td").css("color", "blue");
+			$("ul li").css("color", "red");
+			$("#scores").css("color", "blue");
+			//Colours for various html elements defined in Javascript
+			$('#show_text').bind('click', switch_format);		
+			$('#hide_para').bind('click', disappear_it);
+			$('#show_para').bind('click', change_colour);
+			
+			$('#answer').bind('change', change_colour)
+							.bind('focus', temp_change);
+							
+			$('#scrolltop').click(function (){
+				$('html, body').animate({
+					scrolltop: $("div_header").offset().top
+				}, 2000);
+			});
+			
+			$('#scrollbot').click(function (){
+				$('html, body').animate({
+					scrollbot: $("last").offset().bottom
+				}, 800);	
+			});
+			
+			$("img").resize(200)
+				.attr({
+				alt: "Large scale image",
+				title: "Picture"
+			});
+			$("#thumbs img").resize(80)
+				.attr({
+				alt: "Thumbnail image",
+				title: "Thumbs"
+			});
+			
+	});
+	</script>
+<h1>Example Webpage</h1>
+<h2>Games</h2>
+  <noscript>
+	<h3>Javascript Required</h3>
+  </noscript>
+   <div class="content">
+	<div id="latest">
+		<p>A random paragraph to show JQuery</p>
+		<p>Another random paragraph to show JQuery</p>
+		<p>A further random pargraph to show JQuery</p>
+	</div>
+	
+	<h2>Information about myself</h2>
+	<ol id ="Selectable">
+		<li class="ui-widget-content">Graduate Developer</li>
+		<li class="ui-widget-content">Software Developer</li>
+		<li class="ui-widget-content">Web Developer</li>
+		<li class="ui-widget-content">Web Designer</li>
+		<li class="ui-widget-content">Bsc Hons in Software Development</li>
+		<li class="ui-widget-content">2:2 Grade</li>
+	</ol>
+	
+	<h1 id="infotext">Text Events</h1>
+	
+	<h1 id="scores">Number of Seeds</h1>
+	
+	<table border="1px">
+	<th>Flower Seed Stock</th>
+	<tr><td>Andy</td><td>6</td> </tr>
+	<tr><td>Joe</td><td>8</td> </tr>
+	<tr><td>Adam</td><td>10</td> </tr>
+	<tr><td>Steve</td><td>11</td> </tr>
+	</table>
+	
+	<table border="1px">
+	<th>Vegetable Seed Stock</th>
+	<tr><td>Peas</td><td>54</td> </tr>
+	<tr><td>Cauliflower</td><td>78</td> </tr>
+	<tr><td>Cucumber</td><td>12</td> </tr>
+	<tr><td>Leek</td><td>112</td> </tr>
+	</table>
+	
+	<ul>
+	<li>Multiplications</li>
+	<li>Subtraction</li>
+	<li>Addition</li>
+	<li>Fractions</li>
+	</ul>
+	
+	<ol>
+	<li>Person 1</li>
+	<li>Person 2</li>
+	</ol>
+	
+	<p>Click on the + sign below and it will change to a plus</p>
+	5
+	<span id="show_text">+</span>
+	6
+	<span id="show_equals">=</span>
+	<br />
+	
+	<p id="p1">Click on the hide button to Dissapear, Show to Reappear.</p>
+	
+	<button id="hide_para">Hide</button>
+	<button id="show_para">Show</button>
+	
+	<p>Click the text box and see it change colour. </p>
+	<input type="text" id="answer" name="answer" value="?"><br><br>
+	
+	<p>Click the button below to show a counter</p>
+	
+	<textarea>Seed1 Seed2 Seed3 Seed4 Seed5 Seed6</textarea>
+	<p id="textlog"></p>
+	
+	<img src="2016-ferrari-488.png">
+	<img src="2017-Ford-Mustang-On-White.png">
+  
+	<div id="thumbs">
+		<img src="2016-ferrari-488.png">
+		<img src="2017-Ford-Mustang-On-White.png">
+	</div>
+	<div id="last"><a href= "https://my.indeed.com/p/jamesd-5srv6ta">My Indeed Profile</a></div>
+			
+</body>
+</html>
